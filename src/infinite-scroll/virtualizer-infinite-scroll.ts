@@ -103,7 +103,7 @@ export class VirtualizerInfiniteScroll {
 
   #fetchNextPage = effect(
     () => {
-      const lastItem = this.virtualizer.getVirtualItems().at(-1);
+      const lastItem = this.virtualizer.getVirtualItems()[this.virtualizer.getVirtualItems().length - 1];
       if (!lastItem) {
         return;
       }

@@ -77,7 +77,7 @@ export class GridVirtualizerPadding {
   rowVirtualizer = injectVirtualizer(() => ({
     scrollElement: this.scrollElement(),
     count: this.rows().length,
-    estimateSize: (index) => this.rows().at(index)!,
+    estimateSize: (index) => this.rows()[index]!,
     overscan: 5,
     paddingStart: 200,
     paddingEnd: 200,
@@ -88,7 +88,7 @@ export class GridVirtualizerPadding {
     horizontal: true,
     scrollElement: this.scrollElement(),
     count: this.columns().length,
-    estimateSize: (index) => this.columns().at(index)!,
+    estimateSize: (index) => this.columns()[index]!,
     overscan: 5,
     paddingStart: 200,
     paddingEnd: 200,

@@ -49,7 +49,7 @@ export class RowVirtualizerVariable {
   virtualizer = injectVirtualizer(() => ({
     scrollElement: this.scrollElement(),
     count: this.rows().length,
-    estimateSize: (index) => this.rows().at(index)!,
+    estimateSize: (index) => this.rows()[index]!,
     overscan: 5,
   }));
 }

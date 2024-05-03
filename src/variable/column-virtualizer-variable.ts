@@ -50,7 +50,7 @@ export class ColumnVirtualizerVariable {
     horizontal: true,
     scrollElement: this.scrollElement(),
     count: 10000,
-    estimateSize: (index) => this.columns().at(index)!,
+    estimateSize: (index) => this.columns()[index]!,
     overscan: 5,
   }));
 }

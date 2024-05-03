@@ -60,7 +60,7 @@ export class GridVirtualizerVariable {
   rowVirtualizer = injectVirtualizer(() => ({
     scrollElement: this.scrollElement(),
     count: 10000,
-    estimateSize: (index) => this.rows().at(index)!,
+    estimateSize: (index) => this.rows()[index]!,
     overscan: 5,
   }));
 
@@ -68,7 +68,7 @@ export class GridVirtualizerVariable {
     horizontal: true,
     scrollElement: this.scrollElement(),
     count: 10000,
-    estimateSize: (index) => this.columns().at(index)!,
+    estimateSize: (index) => this.columns()[index]!,
     overscan: 5,
   }));
 }

@@ -89,7 +89,7 @@ export class VirtualizerSticky {
   }));
 
   activeStickyIndex = computed(() => {
-    return this.virtualizer.getVirtualItems().at(0)?.index;
+    return this.virtualizer.getVirtualItems()[0]?.index;
   });
 
   isActiveSticky = (index: number) => this.activeStickyIndex() === index;
