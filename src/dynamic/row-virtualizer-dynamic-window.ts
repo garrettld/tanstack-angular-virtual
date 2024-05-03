@@ -9,7 +9,7 @@ import {
   viewChild,
   viewChildren,
 } from '@angular/core';
-import { injectWindowVirtualizer } from '@tanstack/virtual-angular';
+import { injectWindowVirtualizer } from '../virtualizer';
 import { sentences } from '../util';
 
 @Component({

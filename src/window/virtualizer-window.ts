@@ -6,7 +6,7 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { injectWindowVirtualizer } from '@tanstack/virtual-angular';
+import { injectWindowVirtualizer } from '../virtualizer';
 
 @Component({
   standalone: true,

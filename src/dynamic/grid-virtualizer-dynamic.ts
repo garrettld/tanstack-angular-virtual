@@ -12,7 +12,7 @@ import {
 import {
   injectVirtualizer,
   injectWindowVirtualizer,
-} from '@tanstack/virtual-angular';
+} from '../virtualizer';
 import { generateColumns, generateData } from '../util';
 
 @Component({

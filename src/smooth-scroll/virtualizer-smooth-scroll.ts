@@ -1,5 +1,5 @@
 import { Component, ElementRef, signal, viewChild } from '@angular/core';
-import { elementScroll, injectVirtualizer } from '@tanstack/virtual-angular';
+import { elementScroll, injectVirtualizer } from '../virtualizer';
 
 function easeInOutQuint(t: number) {
   return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;

@@ -8,7 +8,7 @@ import {
   viewChild,
   viewChildren,
 } from '@angular/core';
-import { injectVirtualizer } from '@tanstack/virtual-angular';
+import { injectVirtualizer } from '../virtualizer';
 
 @Component({
   standalone: true,

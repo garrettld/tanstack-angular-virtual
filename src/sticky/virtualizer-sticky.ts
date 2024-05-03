@@ -11,7 +11,7 @@ import { faker } from '@faker-js/faker';
 import {
   injectVirtualizer,
   defaultRangeExtractor,
-} from '@tanstack/virtual-angular';
+} from '../virtualizer';
 
 const groupedNames: Record<string, string[]> = {};
 

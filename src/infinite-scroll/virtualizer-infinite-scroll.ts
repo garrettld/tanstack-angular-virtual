@@ -6,7 +6,7 @@ import {
   effect,
   viewChild,
 } from '@angular/core';
-import { injectVirtualizer } from '@tanstack/virtual-angular';
+import { injectVirtualizer } from '../virtualizer';
 import {
   QueryClient,
   injectInfiniteQuery,
