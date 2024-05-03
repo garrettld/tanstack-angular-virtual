@@ -1,5 +1,7 @@
 # Overview
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/garrettld/tanstack-angular-virtual)
+
 This is a proof of concept for an Angular adapter for TanStack Virtual that uses Angular signals. The app includes working Angular versions of each of the React examples in the TanStack Virtual docs to verify that all functionality works as expected.
 
 Basic usage requires only a call to `injectVirtualizer` and a `viewChild` reference to the scroll element:
