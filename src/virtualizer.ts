@@ -32,7 +32,7 @@ type MapToComputedFactory<T extends (...args: any[]) => any> = T extends (
   ? (...args: Parameters<T>) => Signal<U>
   : never;
 
-type AngularVirtualizer2<
+type AngularVirtualizer<
   TScrollElement extends Element | Window,
   TItemElement extends Element
 > = Omit<
@@ -147,7 +147,7 @@ function proxyVirtualizer<
 
       return untypedTarget[property] || virtualizer[property as keyof V];
     },
-  }) as unknown as AngularVirtualizer2<S, I>;
+  }) as unknown as AngularVirtualizer<S, I>;
 }
 
 function createVirtualizerBase<
@@ -156,7 +156,7 @@ function createVirtualizerBase<
 >(
   options: Signal<VirtualizerOptions<TScrollElement, TItemElement>>,
   injector?: Injector
-): AngularVirtualizer2<TScrollElement, TItemElement> {
+): AngularVirtualizer<TScrollElement, TItemElement> {
   injector ??= inject(Injector);
   return runInInjectionContext(injector!, () => {
     let _v: Virtualizer<TScrollElement, TItemElement>;
@@ -265,7 +265,7 @@ export function injectWindowVirtualizer<TItemElement extends Element>(
     | 'observeElementOffset'
     | 'scrollToFn'
   >
-): AngularVirtualizer2<Window, TItemElement> {
+): AngularVirtualizer<Window, TItemElement> {
   const resolvedOptions = computed(() => {
     return {
       getScrollElement: () => (typeof document !== 'undefined' ? window : null),

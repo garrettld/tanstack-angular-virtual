@@ -26,7 +26,7 @@ import { injectWindowVirtualizer } from '@tanstack/virtual-angular';
               [class.list-item-odd]="row.index % 2 !== 0"
               style="position: absolute; top: 0; left: 0; width: 100%;"
               [style.height.px]="row.size"
-              [style.transform]="'translateY(' + (row.start - (virtualizer.options().scrollMargin ?? 0)) + 'px)'"
+              [style.transform]="'translateY(' + (row.start - virtualizer.options().scrollMargin) + 'px)'"
             >
               Row {{ row.index }}
             </div>

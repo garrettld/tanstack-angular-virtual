@@ -48,7 +48,7 @@ bootstrapApplication(App, {
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'sticky',
+        redirectTo: 'fixed',
       },
       {
         path: 'fixed',
